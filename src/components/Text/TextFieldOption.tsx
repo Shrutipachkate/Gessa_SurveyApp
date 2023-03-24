@@ -30,8 +30,9 @@ const TextFieldOption = () => {
             DragStart(e, "text");
           }}
         >
-          <img className="request-icon" alt="" src="images/request3.svg" />
-          Text
+          <img className="que_image" alt="" src="images/request3.svg" />
+          Text <img className="drag_image" src="./images/dragbtn.svg" alt="" />
+
         </button>
       </div>
     </>

@@ -31,8 +31,9 @@ const SingleChoiceOption = (): JSX.Element => {
             DragStart(e, "singleCorrect");
           }}
         >
-          <img className="text" src="./images/buttonVector.svg" alt="" />
+          <img className="que_image" src="./images/buttonVector.svg" alt="" />
           Single Choice
+          <img className="drag_image" src="./images/dragbtn.svg" alt="" />
         </button>
       </div>
     </>

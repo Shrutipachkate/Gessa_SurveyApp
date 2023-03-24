@@ -199,9 +199,9 @@ const MainContainer: React.FC = () => {
         </div>
         
         
-            {/* <button className="button3">
+            <button className="button3">
               <div className="helper">Share</div>
-            </button> */}
+            </button>
 
         <button
           style={{

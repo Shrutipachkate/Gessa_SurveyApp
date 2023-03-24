@@ -23,8 +23,9 @@ const MultiChoiceOption = (): JSX.Element => {
           draggable
           onDragStart={(e) => DragStart(e, "multipleChoice")}
         >
-          <img className="text" src="./images/buttonVector.svg" alt="" />
+          <img className="que_image" src="./images/buttonVector.svg" alt="" />
           Multiple Choice
+          <img className="drag_image" src="./images/dragbtn.svg" alt="" />
         </button>
       </div>
     </>

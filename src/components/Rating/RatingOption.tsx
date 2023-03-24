@@ -5,7 +5,8 @@ export const RatingOption = () => {
     <>
     <div className="btnMultipleChoice"  >
       <button className="btn" >
-      <img className="request-icon" alt="" src="images/request3.svg" />Rating
+      <img className="que_image" alt="" src="images/request3.svg" />Rating          <img className="drag_image" src="./images/dragbtn.svg" alt="" />
+
       </button>
     </div>
   </>
