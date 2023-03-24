@@ -1,0 +1,35 @@
+.request-icon {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  .iconsdrag-indicator-black-24d {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .snackbar {
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid #e2e7ef;
+    display: flex;
+    flex-direction: row;
+    padding: 12px 12px 12px 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .request-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+ 
+  .request-icon {
+    position: relative;
+    /* flex-shrink: 0; */
+  }
