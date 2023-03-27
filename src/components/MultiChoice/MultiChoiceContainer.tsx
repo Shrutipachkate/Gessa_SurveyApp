@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
-import "./MultiChoiceContainer";
+import "./MultiChoiceContainer.css";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
-
+import { TextField } from "@mui/material";
 interface Option {
   id: number;
   text: string;
@@ -41,7 +41,7 @@ const MultiChoiceContainer: React.FC<MultiChoiceContainerProps> = ({
 
   // for changing an option text
   const OptionTextChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     index: number
   ) => {
     const newOptions = [...options];
@@ -91,20 +91,27 @@ const MultiChoiceContainer: React.FC<MultiChoiceContainerProps> = ({
     <>
       <div style={{ position: "relative" }}>
         <div className="question-editor">
-          <input
-            type="text"
+            
+          <TextField
             className="textQuestion"
-            placeholder="Enter question here"
+            type="text"
+            label="Question"
+            //   id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
             value={question}
             onChange={QuestionChange}
           />
+
           {options.map((option, index) => (
             <div key={index} className="option-container">
               <input type="checkbox" name="correct-option" />
-              <input
+              <TextField
+                label={`Option ${index + 1}`}
                 className="optionText"
-                type="text"
+                id="outlined-size-small"
                 value={option.text}
+                size="small"
                 onChange={(event) => OptionTextChange(event, index)}
               />
 

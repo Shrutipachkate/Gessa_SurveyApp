@@ -1,3 +1,17 @@
 /* .textfield{
     padding-left: 20em;
 } */
+input[type=checkbox] {
+    border: 0px;
+    width: 1.333em;
+    margin: 0%;
+    padding:0%;
+
+    height: 1.333em;
+}
+.singleCorrectAddButton{
+    margin-left: 14px;
+    display: flex;
+    justify-content: flex-start;
+}
+

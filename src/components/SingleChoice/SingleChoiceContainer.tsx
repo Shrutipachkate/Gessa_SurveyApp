@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./SingleChoiceContainer.css";
+import { TextField } from "@mui/material";
+import { color } from "@mui/system";
 
 type Option = {
   id: number;
@@ -29,7 +31,7 @@ const SingleChoiceContainer: React.FC<Props> = ({ id, OrganiseData }) => {
 
   // for changing an option text
   const OptionTextChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     index: number
   ) => {
     const newOptions = [...options];
@@ -79,24 +81,50 @@ const SingleChoiceContainer: React.FC<Props> = ({ id, OrganiseData }) => {
     <>
       <div style={{ position: "relative" }}>
         <div className="question-editor">
-          <input
+          {/* <input
             className="textQuestion"
             type="text"
             placeholder="Enter question here"
             value={question}
             onChange={QuestionChange}
-          />
+          /> */}
+
+          <TextField
+          className="textQuestion"
+          type="text"
+          label="Question"
+          defaultValue="Small"
+          size="small"
+          value={question}
+          onChange={QuestionChange}
+          
+        />
 
           {options.map((option, index) => (
             <div key={index} className="option-container">
               <input type="radio" name="correct-option" />
-              <input
-                className="optionText"
-                type="text"
-                // placeholder={`Option ${index + 1}`}
-                value={option.text}
-                onChange={(event) => OptionTextChange(event, index)}
-              />
+            <TextField
+          label={`Option ${index + 1}`}
+          className="optionText"
+          id="outlined-size-small"
+          value={option.text}
+          size="small"
+          onChange={(event) => OptionTextChange(event, index)}
+          
+        />
+
+
+
+
+        {/* <TextField
+          label="option"
+          id="outlined-size-small"
+          defaultValue="Small"
+          size="small"
+          
+        /> */}
+
+     
 
               <IconButton aria-label="delete">
                 <DeleteIcon onClick={() => DeleteOption(index)} />

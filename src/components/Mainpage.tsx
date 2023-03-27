@@ -12,7 +12,11 @@ import { RatingOption } from "./Rating/RatingOption";
 import "./Mainpage.css";
 import { NetOption } from "./NetPromotor/NetOption";
 import Button from "@mui/material/Button";
-import TextField from "@mui/icons-material"
+// import { TextField } from '@material-ui/core';
+import { TextField } from "@mui/material";
+
+
+
 
 
 interface Data {
@@ -125,7 +129,7 @@ const MainContainer: React.FC = () => {
       </div>
       <div style={{ position: "relative" }}>
         <div className="mainContainer">
-        {/* <div className="head"> Add New Survey </div> */}
+          {/* <div className="head"> Add New Survey </div> */}
           <div className="containerOne"></div>
           <div className="containerSecond">
             <div className="optionTitle">
@@ -146,26 +150,37 @@ const MainContainer: React.FC = () => {
           <div className="containerThird">
             <div className="surveyTitleDate">
 
-            {/* <TextField
-  id="outlined-uncontrolled"
-  label="Uncontrolled"
-  defaultValue="survey title"
-/> */}
-              <input
-                onChange={surveyTitle}
-                value={surveyName}
-                className="inputField"
-                type="text"
-                placeholder="Survey Title"
-              />
 
-              <input
+               <TextField
+               onChange={surveyTitle}
+               value={surveyName}
+               className="inputField"
+          label="Survey Title"
+          id="outlined-size-small"
+          defaultValue=""
+          size="small"
+          
+        />
+
+              {/* <input
                 onChange={expiry}
                 value={expiryDate}
-                className="inputField"
+                className="inputField-date"
                 type="date"
                 placeholder="Second input field"
-              />
+              /> */}
+              
+              <TextField
+             onChange={expiry}
+             value={expiryDate}
+             className="inputField-date"
+             type="date"
+          id="outlined-size-small"
+          size="small"
+          
+        />
+
+
             </div>
             <hr></hr>
             <div
@@ -175,7 +190,7 @@ const MainContainer: React.FC = () => {
               }}
               onDragOver={DragOver}
             >
-              <div className="dropableArea">  </div>
+              <div className="dropableArea"> </div>
             </div>
 
             <div>
@@ -191,36 +206,36 @@ const MainContainer: React.FC = () => {
                     >
                       {Card}
                     </li>
-                  )
+                  );
                 })}
               </ol>
             </div>
           </div>
         </div>
-        
-        
-            <button className="button3">
-              <div className="helper">Share</div>
-            </button>
 
-        <button
-          style={{
-            position: "absolute",
-            
-            bottom: 0,
-            right: 0,
-            marginRight: "27px",
-            marginBottom: "350px",
-            border: "none",
-            outline: "none",
-          }}
-          onClick={postData}
-        >
-          {/* Save Form */}
-          <div className="button4">
-              <div className="helper">Publish</div>
+        <div>
+          <div className="button3">
+            <div className="helper"> Share</div>
+          </div>
+
+          <button
+            style={{
+              position: "absolute",
+
+              bottom: 0,
+              right: 0,
+              marginRight: "27px",
+              marginBottom: "350px",
+              border: "none",
+              outline: "none",
+            }}
+            onClick={postData}
+          >
+            <div className="button4">
+              <div className="helper"> Publish</div>
             </div>
-        </button>
+          </button>
+        </div>
       </div>
     </>
   );

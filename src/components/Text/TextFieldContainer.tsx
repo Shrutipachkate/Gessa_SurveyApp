@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { TextField } from "@mui/material";
 interface Props {
   id: number;
   OrganiseData: (allData: any) => void;
@@ -33,13 +33,25 @@ const TextFieldContainer: React.FC<Props> = ({ id, OrganiseData }) => {
     <>
       <div style={{ position: "relative" }}>
         <div className="question-editor">
-          <input
+          {/* <input
             className="textQuestion"
             type="text"
             placeholder="Enter question here"
             value={question}
             onChange={QuestionChange}
-          />
+          /> */}
+            <TextField
+          className="textQuestion"
+          type="text"
+          label="Question"
+        //   id="outlined-size-small"
+          defaultValue="Small"
+          
+          size="small"
+          value={question}
+          onChange={QuestionChange}
+          
+        />
         </div>
         
 

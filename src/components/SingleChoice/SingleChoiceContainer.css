@@ -56,6 +56,7 @@
     border: none;
     outline: none;
     color: #1D39C4;
+
   }
   .textQuestion{
     padding: 5px;
@@ -63,6 +64,14 @@
     font-family: 'Josefin Sans', sans-serif;
   }
   .optionText{
-    padding: 3px;
+    padding: 50px;
+    width: 100%;
   }
+  input[type=radio] {
+    border: 0px;
+    width: 1.211em;
+    margin: 0%;
+    padding:0%;
+    height: 1.333em;
 
+}
